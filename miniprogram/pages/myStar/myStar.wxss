@@ -1,0 +1,144 @@
+Page {
+    background-color: #f2f2f2;
+    padding-bottom: 1rpx;
+}
+
+/* tab栏 */
+.case-display {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+    display: flex;
+    background-color: white;
+}
+
+.selected {
+    color: #4262b6;
+    border-bottom-style: groove;
+    border-bottom-color: #4262b6;
+    flex: 1;
+    line-height: 80rpx;
+    text-align: center;
+    height: 80rpx;
+}
+
+.normal {
+    color: grey;
+    flex: 1;
+    line-height: 80rpx;
+    text-align: center;
+    height: 80rpx;
+}
+
+side-slip:not(:last-child) .cell,
+side-slip:not(:last-child) .phone,
+side-slip:not(:last-child) .soc {
+    border-bottom: 1rpx solid #ebedf0;
+}
+
+.cells,
+.phones,
+.socs {
+    background: #f2f2f2;
+    margin-top: 90rpx;
+}
+
+.phone,
+.soc {
+    display: flex;
+    padding: 20rpx;
+    background-color: white;
+}
+
+.cell{
+    display: flex;
+    padding: 20rpx;
+    background-color: white;
+    height: 60rpx;
+    align-items: center;
+}
+
+.cell:not(:last-child),
+.phone:not(:last-child),
+.soc:not(:last-child) {
+    border-bottom: 1rpx solid #ebedf0;
+}
+
+.cell_hd,
+.phone_hd,
+.soc_hd {
+    font-size: 0;
+}
+
+
+.phone_hd image {
+    width: 120rpx;
+    height: 159rpx;
+    margin-left: 20rpx;
+    border-radius: 12rpx;
+}
+
+.soc_hd image {
+    width: 100rpx;
+    height: 100rpx;
+    margin-left: 20rpx;
+    border-radius: 12rpx;
+}
+
+
+
+.phone_bd,
+.soc_bd {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-left: 50rpx;
+    justify-content: center;
+}
+
+.cell_bd{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cell_bd text{
+    font-size: 35rpx;
+}
+
+.phone_bd .name,
+.soc_bd .name {
+    font-size: 35rpx;
+}
+
+.details_content{
+    margin-right: 10px;
+    font-size: 25rpx;
+}
+
+.nocontent {
+    margin-top: 200rpx;
+    height: 300rpx;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nocontent image {
+    height: 250rpx;
+    width: 250rpx;
+}
+
+.footer {
+    margin-top: 40rpx;
+    text-align: center;
+}
+
+.loading{
+    position: absolute;
+    left: 330rpx;
+    top: 50%;
+}

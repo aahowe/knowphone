@@ -1,0 +1,7 @@
+<!--custom-tab-bar/index.wxml-->
+<view class="tabbar">
+  <view class="item {{index==idx?'active':''}}" wx:for="{{tabBar}}" wx:for-index="idx" wx:key="index" bindtap="goto" data-index='{{idx}}'>
+    <image src="{{ index == idx ? item.selectedicon : item.icon }}" mode="aspectFit" class="icon" />
+    <view class="text">{{item.name}}</view>
+  </view>
+</view>

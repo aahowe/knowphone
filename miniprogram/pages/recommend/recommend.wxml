@@ -1,0 +1,123 @@
+<!-- 步骤条 -->
+<view class="title">
+    <l-steps active-index="{{index}}" dot="{{true}}">
+        <l-step title="开始"></l-step>
+        <l-step title="问题1"></l-step>
+        <l-step title="问题2"></l-step>
+        <l-step title="问题3"></l-step>
+        <l-step title="问题4"></l-step>
+        <l-step title="推荐"></l-step>
+    </l-steps>
+</view>
+<!-- 开始卡片 -->
+<van-transition show="{{ show0 }}" name="" duration="{{ duration }}" enter-class="{{back?'van-enter-class-b':'van-enter-class'}}" enter-active-class="van-enter-active-class" leave-active-class="van-leave-active-class" leave-to-class="{{back?'van-leave-to-class-b':'van-leave-to-class'}}">
+    <view class="card">
+        <image class="logo" src="/images/logo.jpg" />
+        <text class="starttexttitle">手机智能推荐</text>
+        <text class="starttext">通过回答几个简单的问题为您推荐最合适的手机</text>
+        <image class="recommend" src="/images/recommend.jpg" />
+        <l-button type="default" bind:lintap="next" class="startbutton">开始</l-button>
+    </view>
+</van-transition>
+<!-- 问题卡片 -->
+<van-transition show="{{ show1 }}" name="" duration="{{ duration }}" enter-class="{{back?'van-enter-class-b':'van-enter-class'}}" enter-active-class="van-enter-active-class" leave-active-class="van-leave-active-class" leave-to-class="{{back?'van-leave-to-class-b':'van-leave-to-class'}}">
+    <view class="card">
+        <image class="questionimg" src="/images/cost.jpg" mode="aspectFill" />
+        <text class="questiontitle">您购买手机的预算是多少？</text>
+        <van-radio-group value="{{request.cost.max}}" id="q1">
+            <view class="choices">
+                <view class="{{(item.name.max==request.cost.max)?'choice_selected':'choice'}}" bindtap="select" wx:for="{{question1}}" wx:key="text" data-item="{{item}}">
+                    <van-radio name="{{item.name.max}}">{{item.text}}</van-radio>
+                </view>
+            </view>
+        </van-radio-group>
+        <view class="bottom_button">
+            <l-button type="default" bind:lintap="previous">上一个</l-button>
+            <l-button type="default" bind:lintap="next">下一个</l-button>
+        </view>
+    </view>
+</van-transition>
+<van-transition show="{{ show2 }}" name="" duration="{{ duration }}" enter-class="{{back?'van-enter-class-b':'van-enter-class'}}" enter-active-class="van-enter-active-class" leave-active-class="van-leave-active-class" leave-to-class="{{back?'van-leave-to-class-b':'van-leave-to-class'}}">
+    <view class="card">
+        <image class="questionimg" src="/images/android.jpg" mode="aspectFill" />
+        <text class="questiontitle">您对手机系统是否有要求？</text>
+        <van-radio-group value="{{request.os}}" id="q2">
+            <view class="choices">
+                <view class="{{(item.name==request.os)?'choice_selected':'choice'}}" bindtap="select" wx:for="{{question2}}" wx:key="name" data-item="{{item}}">
+                    <van-radio name="{{item.name}}">{{item.text}}</van-radio>
+                </view>
+            </view>
+        </van-radio-group>
+        <view class="bottom_button">
+            <l-button type="default" bind:lintap="previous">上一个</l-button>
+            <l-button type="default" bind:lintap="next">下一个</l-button>
+        </view>
+    </view>
+</van-transition>
+<van-transition show="{{ show3 }}" name="" duration="{{ duration }}" enter-class="{{back?'van-enter-class-b':'van-enter-class'}}" enter-active-class="van-enter-active-class" leave-active-class="van-leave-active-class" leave-to-class="{{back?'van-leave-to-class-b':'van-leave-to-class'}}">
+    <view class="card">
+        <image class="questionimg" src="/images/game.jpg" mode="aspectFill" />
+        <text class="questiontitle">您是否经常在手机上玩大型3D游戏？</text>
+        <van-radio-group value="{{request.performance}}" id="q3">
+            <view class="choices">
+                <view class="{{(item.name==request.performance)?'choice_selected':'choice'}}" bindtap="select" wx:for="{{question3}}" wx:key="name" data-item="{{item}}">
+                    <van-radio name="{{item.name}}">{{item.text}}</van-radio>
+                </view>
+            </view>
+        </van-radio-group>
+        <view class="bottom_button">
+            <l-button type="default" bind:lintap="previous">上一个</l-button>
+            <l-button type="default" bind:lintap="next">下一个</l-button>
+        </view>
+    </view>
+</van-transition>
+<van-transition show="{{ show4 }}" name="" duration="{{ duration }}" enter-class="{{back?'van-enter-class-b':'van-enter-class'}}" enter-active-class="van-enter-active-class" leave-active-class="van-leave-active-class" leave-to-class="{{back?'van-leave-to-class-b':'van-leave-to-class'}}">
+    <view class="card">
+        <image class="questionimg" src="/images/screensize.jpg" mode="aspectFill" />
+        <text class="questiontitle">您喜欢大屏手机还是小屏手机？</text>
+        <van-radio-group value="{{request.screen}}" id="q4">
+            <view class="choices">
+                <view class="{{(item.name==request.screen)?'choice_selected':'choice'}}" bindtap="select" wx:for="{{question4}}" wx:key="name" data-item="{{item}}">
+                    <van-radio name="{{item.name}}">{{item.text}}</van-radio>
+                </view>
+            </view>
+        </van-radio-group>
+        <view class="bottom_button">
+            <l-button type="default" bind:lintap="previous">上一个</l-button>
+            <l-button type="default" bind:lintap="next">提交</l-button>
+        </view>
+    </view>
+</van-transition>
+<!-- 推荐卡片 -->
+<van-transition show="{{ show5 }}" name="" duration="{{ duration }}" enter-class="{{back?'van-enter-class-b':'van-enter-class'}}" enter-active-class="van-enter-active-class" leave-active-class="van-leave-active-class" leave-to-class="{{back?'van-leave-to-class-b':'van-leave-to-class'}}">
+    <view class="card">
+        <!-- 加载 -->
+        <van-loading wx:if="{{success==false}}" custom-class="loading" color="#3863BC" size="100rpx" text-size="28rpx" vertical>计算中...</van-loading>
+        <view class="resulttitle" wx:if="{{(empty==false)&&(success)}}">
+            <text>我们为您推荐以下手机</text>
+            <image class="resultimg" src="/images/congratulation.jpg" />
+        </view>
+        <!-- 空状态 -->
+        <view class="empty" wx:if="{{empty}}">
+            <image src="/images/nocontent.png"></image>
+            <text>暂未找到适合您的手机</text>
+        </view>
+        <scroll-view enable-flex class="search_view" scroll-y="true" wx:if="{{(empty==false)&&(success)}}">
+            <!-- 搜索结果item -->
+            <view class="phoneitem" bindtap="gotophone" wx:for="{{result}}" wx:key="_id" data-item="{{item}}">
+                <image src="{{item.img}}" />
+                <view class="details">
+                    <text class="details_name">{{item.name}}</text>
+                    <text class="details_content">{{"处理器："+item.soc}}</text>
+                    <text class="details_content">{{item.low+" "}}{{item.price+"¥"}}</text>
+                    <text class="details_content">{{"发售日期："+item.date}}</text>
+                </view>
+            </view>
+        </scroll-view>
+        <view class="bottom_button" wx:if="{{success}}">
+            <l-button type="default" bind:lintap="restart">重新选择偏好</l-button>
+        </view>
+    </view>
+</van-transition>
+<!-- 提示 -->
+<l-message show="{{showmessage}}" content="{{message}}" type="{{messagetype}}" />

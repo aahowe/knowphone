@@ -1,0 +1,8 @@
+{
+    "backgroundColor": "#f2f2f2",
+    "usingComponents": {
+        "van-dropdown-menu": "/components/vant-weapp/dropdown-menu/index",
+        "van-dropdown-item": "/components/vant-weapp/dropdown-item/index",
+        "l-loadmore":"/miniprogram_npm/lin-ui/loadmore/index"
+    }
+}

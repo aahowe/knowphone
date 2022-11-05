@@ -1,0 +1,21 @@
+<!--pages/knowledge/knowledge.wxml-->
+<view class="toptitle">
+    <image src="/images/library.png"/>
+    <text class='titletext'>知识库</text>
+    <view></view>
+    <text class="childtitletext">教你懂手机</text>
+</view>
+
+<view class="search" bindtap="gotosearch">
+    <image src="/images/search.png"/>
+    <text>点击这里搜索所有词条</text>
+</view>
+
+<view class="grid-list" >
+    <view class="grid-item" bindtap="gotoitem" wx:for="{{gridList}}" wx:key="id" style="background-color: {{item.color}};" data-item="{{item}}">
+        <image src="{{item.icon}}"/>
+        <text> {{item.name}}</text>
+    </view>
+</view>
+<!-- 底部占位 -->
+<view class="bottom"></view>

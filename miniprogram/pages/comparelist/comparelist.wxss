@@ -1,0 +1,95 @@
+/* pages/comparelist/comparelist.wxss */
+page {
+    background-color: #f2f2f2;
+}
+
+.example_phones{
+    width: 700rpx;
+    height: 230rpx;
+    margin-top: 20rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0px 0px 20px -10px #888;
+}
+
+.example_phones .icon{
+    margin: 20rpx;
+}
+
+.phone_img{
+    margin-left: 10px;
+    width: 160rpx;
+    height: 212rpx;
+}
+
+.phone_name{
+    margin-bottom: 10px;
+    margin-left: 10px;
+    font-size: 45rpx;
+}
+
+.cells {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.details {
+    width: 420rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.details_content {
+    font-size: 25rpx;
+    margin-left: 10px;
+}
+
+.button{
+    position: fixed;
+    right: 20px;
+    bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bottom_button{
+    background-color: white;
+    border-radius: 50%;
+    width: 100rpx;
+    height: 100rpx;
+    box-shadow: 0px 0px 20px -10px #888;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 99;
+    animation: animation2 1500ms linear both;
+    margin-top: 20px;
+}
+
+.bottom_button icon{
+    color: #3863BC;
+}
+
+.bottom_button_t{
+    background-color: white;
+    border-radius: 50%;
+    width: 100rpx;
+    height: 100rpx;
+    box-shadow: 0px 0px 20px -10px #888;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 99;
+    animation: animation1 1500ms linear both;
+    margin-top: 20px;
+}
+
+.bottom_button_t icon{
+    color: #3863BC;
+}

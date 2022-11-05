@@ -1,0 +1,149 @@
+/**app.wxss**/
+@import 'components/vant-weapp/common/index.wxss';
+
+page {
+    background-color: #f2f2f2;
+    font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica,
+      Segoe UI, Arial, Roboto, 'PingFang SC', 'miui', 'Hiragino Sans GB', 'Microsoft Yahei',
+      sans-serif;
+  }
+
+/* 1.5倍放大动画 */
+@keyframes animation1 { 
+    0% { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    4.3% { transform: matrix3d(1.257, 0, 0, 0, 0, 1.257, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    8.61% { transform: matrix3d(1.439, 0, 0, 0, 0, 1.439, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    12.91% { transform: matrix3d(1.526, 0, 0, 0, 0, 1.526, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    17.22% { transform: matrix3d(1.547, 0, 0, 0, 0, 1.547, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    28.33% { transform: matrix3d(1.51, 0, 0, 0, 0, 1.51, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    39.44% { transform: matrix3d(1.497, 0, 0, 0, 0, 1.497, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    61.66% { transform: matrix3d(1.5, 0, 0, 0, 0, 1.5, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    83.98% { transform: matrix3d(1.5, 0, 0, 0, 0, 1.5, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    100% { transform: matrix3d(1.5, 0, 0, 0, 0, 1.5, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); } 
+  }
+  
+  
+  /* 1.5倍缩小动画 */
+  @keyframes animation2 { 
+    0% { transform: matrix3d(1.5, 0, 0, 0, 0, 1.5, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    4.3% { transform: matrix3d(1.243, 0, 0, 0, 0, 1.243, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    8.61% { transform: matrix3d(1.061, 0, 0, 0, 0, 1.061, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    12.91% { transform: matrix3d(0.974, 0, 0, 0, 0, 0.974, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    17.22% { transform: matrix3d(0.953, 0, 0, 0, 0, 0.953, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    28.33% { transform: matrix3d(0.99, 0, 0, 0, 0, 0.99, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    39.44% { transform: matrix3d(1.003, 0, 0, 0, 0, 1.003, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    61.66% { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    83.98% { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    100% { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); } 
+  }
+
+      /* 1.1倍放大动画 */
+  @keyframes animation3 { 
+    0% { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    4.3% { transform: matrix3d(1.051, 0, 0, 0, 0, 1.051, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    8.61% { transform: matrix3d(1.088, 0, 0, 0, 0, 1.088, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    12.91% { transform: matrix3d(1.105, 0, 0, 0, 0, 1.105, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    17.22% { transform: matrix3d(1.109, 0, 0, 0, 0, 1.109, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    28.33% { transform: matrix3d(1.102, 0, 0, 0, 0, 1.102, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    39.44% { transform: matrix3d(1.099, 0, 0, 0, 0, 1.099, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    61.66% { transform: matrix3d(1.1, 0, 0, 0, 0, 1.1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    83.98% { transform: matrix3d(1.1, 0, 0, 0, 0, 1.1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    100% { transform: matrix3d(1.1, 0, 0, 0, 0, 1.1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); } 
+  }
+  
+    /* 1.1倍缩小动画 */
+    @keyframes animation4 { 
+        0% { transform: matrix3d(1.1, 0, 0, 0, 0, 1.1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+        4.3% { transform: matrix3d(1.049, 0, 0, 0, 0, 1.049, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+        8.61% { transform: matrix3d(1.012, 0, 0, 0, 0, 1.012, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+        12.91% { transform: matrix3d(0.995, 0, 0, 0, 0, 0.995, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+        17.22% { transform: matrix3d(0.991, 0, 0, 0, 0, 0.991, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+        28.33% { transform: matrix3d(0.998, 0, 0, 0, 0, 0.998, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+        39.44% { transform: matrix3d(1.001, 0, 0, 0, 0, 1.001, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+        61.66% { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+        83.98% { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+        100% { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); } 
+      }
+
+      /* 0.95倍缩小动画 */
+      @keyframes animation5 { 
+        0% { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+        4.3% { transform: matrix3d(0.974, 0, 0, 0, 0, 0.974, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+        8.61% { transform: matrix3d(0.956, 0, 0, 0, 0, 0.956, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+        12.91% { transform: matrix3d(0.947, 0, 0, 0, 0, 0.947, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+        17.22% { transform: matrix3d(0.945, 0, 0, 0, 0, 0.945, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+        28.33% { transform: matrix3d(0.949, 0, 0, 0, 0, 0.949, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+        39.44% { transform: matrix3d(0.95, 0, 0, 0, 0, 0.95, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+        61.66% { transform: matrix3d(0.95, 0, 0, 0, 0, 0.95, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+        83.98% { transform: matrix3d(0.95, 0, 0, 0, 0, 0.95, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+        100% { transform: matrix3d(0.95, 0, 0, 0, 0, 0.95, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); } 
+      }  
+
+      /* 0.95倍放大动画 */
+      @keyframes animation6 { 
+        0% { transform: matrix3d(0.95, 0, 0, 0, 0, 0.95, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+        4.3% { transform: matrix3d(0.976, 0, 0, 0, 0, 0.976, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+        8.61% { transform: matrix3d(0.994, 0, 0, 0, 0, 0.994, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+        12.91% { transform: matrix3d(1.003, 0, 0, 0, 0, 1.003, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+        17.22% { transform: matrix3d(1.005, 0, 0, 0, 0, 1.005, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+        28.33% { transform: matrix3d(1.001, 0, 0, 0, 0, 1.001, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+        39.44% { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+        61.66% { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+        83.98% { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+        100% { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); } 
+      }
+      
+
+      /* icon图标 */
+      @font-face {
+        font-family: 'iconfont';
+        src: url('data:font/woff2;charset=utf-8;base64,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') format('woff2'),
+            url('data:font/woff;charset=utf-8;base64,d09GRgABAAAAAAk8AA0AAAAADJAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABGRlRNAAAJIAAAABoAAAAcksFvJ0dERUYAAAkAAAAAHgAAAB4AKQAST1MvMgAAAaAAAABGAAAAYDw1TapjbWFwAAACCAAAAGMAAAGCnpWKsmdhc3AAAAj4AAAACAAAAAj//wADZ2x5ZgAAAogAAAS5AAAFuHjv4dtoZWFkAAABMAAAADAAAAA2ID2MG2hoZWEAAAFgAAAAHQAAACQHpQOFaG10eAAAAegAAAAeAAAAIA5FAd1sb2NhAAACbAAAABoAAAAaCPQHbm1heHAAAAGAAAAAHwAAACABGgBhbmFtZQAAB0QAAAFGAAACgl6CAQJwb3N0AAAIjAAAAGsAAACXFR8XrHjaY2BkYGAA4urNU2bG89t8ZeBmYQCBe31L+OG01f+9zMeZnYFcDgYmkCgAQuULWnjaY2BkYGBu+N/AEMPCAALMxxkYGVABCwBVuwMzAAAAeNpjYGRgYOBhCGVgYQABJiDmAkIGhv9gPgMAEjcBfAB42mNgYWFgnMDAysDA1Ml0hoGBoR9CM75mMGLkAIoysDIzYAUBaa4pDAeeMby6zdzwv4GBgfkOA5BkYERSosDACAB75w1eAAB42mNhgAAWCPZmuMrgzODJ4MAQxGAFZF8FACJEBC8AAHjaY2BgYGaAYBkGRgYQqAHyGMF8FoYEIC3CIAAUYXnG8Ezvme+zzGf5z+6/OPTqxqvb//8zMGATlWKWvCa5Q3Ku5AxJTXF3USNRA6jJGICRjQEuxcgEJJjQFTAMewAANk4jWAAAAAAAAAAAAABiALoBDgGIAgICZgKmAsYC3AAAeNpFVF1sFFUUvufenf/t/OzM7LTb2e3urDuzdH9a9m82tCylJVK3YFSUpCQ2hAcfAIX4IJqYCErw0YAvvvCAJo0BQ6IJ1oQYGtQgSQNPvChvGiLpgz74gNGd9UyLcXZy7tx7vu/uOeee7xJKloYb7AZrkRKZIQTqEJSCOhR3erwGnErTE8D4HN0DTrrRg4CFPeD4CQh8DcLOFISNsBP7EPUVVcXor7cSmiTp7Ez0RBrhEvytOghqStzcFFK6QGvrfCIaKqx0W9O+85ly5SFjI9yxo4LxMzwWFVr+R5Rl8e8yJHWD/yHalHQFuHPvJxRdAvt7PnUzqT06KYonHmnKah445f59jXmEMPJguM4m2QIxydRWFgVPBduwctAsYNRto1UH01KhWPDq8awHM2ClZ6DRaTcbObBZ0eO35y2ffhj9UV2qVJaqoNf61Wp/LtvIRr+jwberK8cVvZtrZNdx3JrobAGxg9vVpSq+tIfcQX4bTXtoYhgOgy90R9McneBDycLwT3aLJUmRhIRwRc/fDUXb4ivg+W2jiEF2QuikHciBChUwLD5oGk3wPQFwbLc6M+i1mXzDchdda81yX9TGZEGB82bThHcVXhnVDrm3rrwZfUJ5Fl08/ZlrvWq6SddcWzNd14SK4WZlOKKDEa3KrqtHD0x3FxyBRUqjb6LVr61xcK24rs8N77I1FhKNOORlQsxCI41l5bGOGGer4+D/FVmRQdHK0WajR9utwA/8KeyidquHK2mn2apTwVOpjQgnjT8st6VSr04v0Ye5SiU3eAbtwnv9D/Ydg6OwvJCp7MpnO5VMQnbV1BvmuGqNJos1Nu/saGczjfKoaOXHCoVxW7Ekc2LSc1UWPt0kF2/4KFqBT6MbsBQ9DrolQ803iobupZN8ns+kdTvJe+V4CdSJel7Pu44gS4KUcEaTjpGUnQJJkDkisnX6BPUQ4vdB7KYSFp5TsWMc20o3OrvBMaw4F+z9sNM2UBItP2CWwAu8F+ffNtC3BwQepVTqOBx4fBa2mS2fXYkujrZGo0uaYWipcXNuMti39+O9+4LKORVX1jPZevdCt57NXEfU9TtjY9GXCTg0NgaHB8aIaWZMk75wWVEu85l8hv8NV0Y2xqP75Zyr4ePmyrAz5McnMkIUKqquJEdkXZPB7styX1OUjxIXFeVS9HlKzcdMNHE/JshLw2/ZddSPTcqkTeYx50acIEa9ddYYd5xq0ymirgQsglNA6YSoqoChflBZ2LKoKgfdKDqUHLroa8sH+5XatDdY9KZrlf7B5Y2NxXcWqSLQm2ISnj2z//XuShiunI5NN5j3/fnnYwMna9X+gWXbm5727OUD/Wqth9hxIQmy6OzHDajdXTkVk06tdHsxKQhiJgZNdg3vsTtsiuClUOLSnYD5e6DjByU8HjxDxsfHOAFp/EqHpQ4VyFDSYScV7gm8HP0iJs4mrMRZJkW/Kpxwj0cPXjyEW77AJWVwRf6uYMIkiACSFEUC3UFT4o88oqVk4gK3dQ+RV1iFXiMckcgIBhQ6QhAGBaNgGgUDNo/Prr49+xM9PLh6GK7C+ROzq2dmNwdXKYlwHt8L//EZEWK1bfMePCXQa/9D/wUHWxhfAAAAeNp9kM1Kw0AUhc/0T21BxILrWRVBSH+WpbtC3blwUddtOklbkkyYTAtdunXlA7j1MXwAn0Fw5YN4Gq8IFZqQyzfn3nNmJgAu8QmFn6eNa2GFU9wJV3CCWLhK/VG4Rn4RrqOFN+EG9Q/hJm7USLiFtnpmgqqdcdUp0/ascIGRcAXneBCuUrfCNfKTcB1XeBVuUH8XbmKKL+EWOmqJMRwMZvCsC2jMsWNdIWRuhqisHhg7M/Nmoec7vQptFtmM4r+pv9Y942JskDDacWniTTJzRy1HWlOmORQc2bc0+gjQo2xcsbKZ7ge9o/Zb2rMy4vCeBbY85oCqp1Hzc7SnpInEGF4hIWvkZW9NJaQeMNZkxv3+lWIbD7yPdORsqifc1iSJ1bmzaxN6Di/LPXIM0eUbHaQH5eFTjnmfD7vdSAKC0Kb4Bg9qcIcAAHjaY2BigAAuMMnIgA54wKJMjEyMzIwsjKyMbIzsjByMnIxcXMaGxRn5pcmJeelsIEZWJpiqTGUPC04pzUzKZKvKyCzOyGQrz09JLc/ngCkWSCnNryhNzAPhqoz8vHRhqEB5aiZcDABiMCPeAAAAAAH//wACAAEAAAAMAAAAFgAAAAIAAQADAAsAAQAEAAAAAgAAAAB42mNgYGBkAIKrS9Q5QPS9viX8MBoAPjUF6AAA') format('woff');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+    }
+
+    .iconfont {
+        font-family: "iconfont" !important;
+        font-size: 50rpx;
+        font-style: normal;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      
+      .icon-VSduibi:before {
+        content: "\e669";
+      }
+      
+      .icon-duoxuanweixuanzhong:before {
+        content: "\eadb";
+      }
+      
+      .icon-duoxuanxuanzhong:before {
+        content: "\ead8";
+      }
+      
+      .icon-31shoucang:before {
+        content: "\e600";
+      }
+      
+      .icon-shoucang:before {
+        content: "\e8c2";
+      }
+      
+      .icon-wodewo:before {
+        content: "\e6df";
+      }
+      
+      .icon-zhishi:before {
+        content: "\e66f";
+      }
+      
+      .icon-shouji:before {
+        content: "\e62e";
+      }
+      
+      .icon-shouye:before {
+        content: "\e64d";
+      }

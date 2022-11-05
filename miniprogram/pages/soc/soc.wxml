@@ -1,0 +1,114 @@
+<!-- soc图标&名字 -->
+<view class="socpage">
+    <view class="soc_title">
+        <image class="soc_icon" src="{{icon}}" />
+        <view class="soc_name">
+            <text style="font-size: 45rpx;">{{socname}}</text>
+        </view>
+    </view>
+    <!-- soc基本信息 -->
+    <view class="soc_details">
+        <view class="head_text">
+            <text>详细参数</text>
+        </view>
+        <view class="cpu_items">
+            <view class="details_title">
+                <text>CPU架构：</text>
+            </view>
+            <view class="details_content">
+                <text>{{cpu_spec}}</text>
+            </view>
+        </view>
+        <view class="cpu_items">
+            <view class="details_title">
+                <text>GPU架构：</text>
+            </view>
+            <view class="details_content">
+                <text>{{gpu_spec}}</text>
+            </view>
+        </view>
+        <view class="cpu_items">
+            <view class="details_title">
+                <text>制程工艺：</text>
+            </view>
+            <view class="details_content">
+                <text>{{process}}</text>
+            </view>
+        </view>
+        <view class="cpu_items">
+            <view class="details_title">
+                <text>GeekBench5：</text>
+            </view>
+            <view class="details_content">
+                <text>{{gb5}}</text>
+            </view>
+        </view>
+        <view class="cpu_items">
+            <view class="details_title">
+                <text>GFXBench5：</text>
+            </view>
+            <view class="details_content">
+                <text>{{gfx5}}</text>
+            </view>
+        </view>
+        <view class="cpu_items">
+            <view class="details_title">
+                <text>综合得分：</text>
+            </view>
+            <view class="details_content">
+                <text>{{score}}</text>
+            </view>
+        </view>
+        <view class="cpu_items">
+            <view class="details_title">
+                <text>GPU功耗：</text>
+            </view>
+            <view class="details_content">
+                <text>{{power_gpu}}</text>
+            </view>
+        </view>
+    </view>
+    <!-- 搭载机型 -->
+    <view class="example">
+        <view class="head_text">
+            <text>搭载此SOC的部分机型</text>
+        </view>
+        <view class="example_phones" wx:for="{{phone}}" wx:key="id" data-id="{{item.id}}" bindtap="gophone">
+            <image src="{{item.phoneimg}}" class="phone_img" />
+            <text class="phone_name">{{item.phonename}}</text>
+        </view>
+    </view>
+    <!-- 评分 -->
+    <view class="rate">
+        <view class="head_text">
+            <text>用户评价</text>
+        </view>
+        <text class="rate_text">{{rate}}</text>
+        <l-rate score="{{rate}}" size="70" active-color="#3863BC" inActive-color="#edf3fc" bind:linchange="changerate" disabled="{{disablerate}}" />
+    </view>
+</view>
+<!-- 底部按钮 -->
+<view class="bottom">
+    <l-button special="{{true}}" open-type="share">
+        <view class="bottom_button">
+            <l-icon name="share" />
+        </view>
+    </l-button>
+    <l-button special="{{true}}" bind:lintap="star" disabled="{{disabledstar}}">
+        <view class="bottom_button">
+            <icon class="iconfont {{star?'icon-shoucang':'icon-31shoucang'}} {{starcolor}}"></icon>
+        </view>
+    </l-button>
+    <!-- <l-button special="{{true}}" bind:lintap="compare" disabled="{{disabledvs}}">
+        <view class="bottom_button">
+            <icon class="iconfont icon-VSduibi {{vscolor}}"></icon>
+        </view>
+    </l-button> -->
+</view>
+<!-- 加载动画 -->
+<l-loading type="flash" show="{{loading}}" full-screen="{{true}}" size="large">
+</l-loading>
+<!-- 提示登录弹窗 -->
+<l-dialog show="{{logindg}}" type="alert" title="提醒" content="若需使用该功能请先登录" />
+<!-- 评分提示 -->
+<l-toast show="{{toast}}" icon="{{toasttype}}" title="{{toastcontent}}" />

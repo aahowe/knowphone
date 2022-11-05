@@ -1,0 +1,83 @@
+<view class="page">
+    <!-- 开始动画 -->
+    <view class="{{show?('loadingview'):('loadingviewfade')}}" wx:if="{{showview}}">
+        <view class="main">
+            <image class="bg_img " src="/images/start.jpg" mode="aspectFill"></image>
+            <view class="loader">
+                <view class="upper ball"></view>
+                <view class="right ball"></view>
+                <view class="lower ball"></view>
+                <view class="left ball"></view>
+            </view>
+        </view>
+    </view>
+    <!-- 渐变色 -->
+    <view class="titleback"></view>
+    <!-- 轮播图 -->
+    <my-swiper source="{{source}}" direction="left" delay="{{3000}}" bind:touch="touch" wx:if="{{swiper}}">
+    </my-swiper>
+    <!-- 搜索框 -->
+    <l-search-bar show-cancel="{{false}}" bg-color="#ffffff" shape="circle" placeholder="搜索" bind:tap="gotosearch" l-class="searchbar" />
+    <view class="box">
+        <!-- 手机智能推荐 -->
+        <view class="{{recstyle}}" catchtouchstart="rectouch" catchtouchend="gotorec">
+            <image class="boximg" src="/images/box-2.jpg" mode="aspectFill"></image>
+        </view>
+        <!-- soc排行榜 -->
+        <view class="{{socstyle}}" catchtouchstart="soctouch" catchtouchend="gotosocrank">
+            <image class="boximg" src="/images/box-1.jpg" mode="aspectFill"></image>
+        </view>
+    </view>
+    <!-- 语音识别提示气泡 -->
+    <image bindtap="closetips" src="{{tipsimg}}" class="{{showtips&&showsearch?'tipsimg':(!showtips&&showsearch)?('hidetipsimg'):((showtips&&!showsearch)?('tipsimgright'):('hidetipsimgright'))}}"></image>
+    <!-- 语音识别 -->
+    <view class="voiceview">
+        <image class="{{showsearch?(recording?('recording'):('voicecenter')):('voiceright')}}" src="{{voice}}" catchtouchstart="streamRecord" catchtouchend="streamRecordEnd" />
+    </view>
+    <!-- 搜索弹出页面 -->
+    <van-popup show="{{showsearch}}" position="top" round bind:click-overlay="closesearch">
+        <!-- 搜索框 -->
+        <l-search-bar class="searchbar" value="{{input}}" placeholder="输入您希望购买的手机特征" bg-color="#f2f2f2" shape="circle" bind:lincancel="closesearch" bind:linconfirm="searchphone" />
+        <!-- 搜索结果列表 -->
+        <scroll-view enable-flex class="search_view" scroll-y="true" wx:if="{{empty==false}}">
+            <!-- 加载动画 -->
+            <l-loading type="flash" show="{{loading}}" size="large" />
+            <!-- 搜索结果item -->
+            <view class="phoneitem" bindtap="gotophone" wx:for="{{result}}" wx:key="_id" data-item="{{item}}">
+                <image class="phoneimage" src="{{item.img}}" />
+                <view class="details">
+                    <text class="details_name">{{item.name}}</text>
+                    <text class="details_content">{{"处理器："+item.soc}}</text>
+                    <text class="details_content">{{item.low+" "}}{{item.price+"¥"}}</text>
+                    <text class="details_content">{{"发售日期："+item.date}}</text>
+                </view>
+            </view>
+        </scroll-view>
+        <!-- 空状态 -->
+        <view class="empty" wx:if="{{empty}}">
+            <image src="/images/nocontent.png"></image>
+            <text>未找到您所描述的手机</text>
+        </view>
+    </van-popup>
+    <!-- 手机热榜 -->
+    <view class="hot">
+        <view class="hottitle">
+            <van-icon name="fire" color="red" size="70rpx" />
+            <text class="hottitletext1">手机热榜</text>
+            <text class="hottitletext2">HOT PHONE</text>
+        </view>
+        <van-skeleton row="10" loading="{{hotloading}}">
+            <view class="phonelist">
+                <view class="hotphone" wx:for="{{hotlist}}" wx:key="_id" data-item="{{item}}" bindtap="gotophone">
+                    <image src="{{item.img}}" class="phoneimage" />
+                    <view class="details">
+                        <text class="details_name">{{item.name}}</text>
+                        <l-rate disabled="{{true}}" score="{{item.rate}}" size="40" />
+                    </view>
+                </view>
+            </view>
+        </van-skeleton>
+    </view>
+    <!-- 错误提示 -->
+    <l-message show="{{showmessage}}" content="{{error}}" type="error" />
+</view>

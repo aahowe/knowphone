@@ -1,0 +1,15 @@
+{
+    "backgroundColor": "#f2f2f2",
+    "usingComponents": {
+        "l-search-bar": "/miniprogram_npm/lin-ui/search-bar/index",
+        "my-swiper": "/components/My-swiper/my-swiper",
+        "l-message": "/miniprogram_npm/lin-ui/message/index",
+        "van-popup": "/components/vant-weapp/popup/index",
+        "l-loading": "/miniprogram_npm/lin-ui/loading/index",
+        "van-skeleton": "/components/vant-weapp/skeleton/index",
+        "van-icon": "/components/vant-weapp/icon/index",
+        "l-rate":"/miniprogram_npm/lin-ui/rate/index"
+    },
+    "disableScroll": false,
+    "navigationBarBackgroundColor": "#ffffff"
+}

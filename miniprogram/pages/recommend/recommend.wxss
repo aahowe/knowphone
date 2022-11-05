@@ -1,0 +1,194 @@
+.title {
+    background-color: white;
+    width: 680rpx;
+    height: 140rpx;
+    margin: auto;
+    margin-top: 30rpx;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px -10px #888;
+    padding-top: 60rpx;
+}
+
+.card {
+    background-color: white;
+    width: 680rpx;
+    height: 1000rpx;
+    margin: auto;
+    margin-top: 50rpx;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px -10px #888;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.van-enter-class {
+    transform: translateX(750rpx);
+}
+
+.van-leave-to-class {
+    transform: translateX(-750rpx);
+}
+
+.van-enter-class-b {
+    transform: translateX(-750rpx);
+}
+
+.van-leave-to-class-b {
+    transform: translateX(750rpx);
+}
+
+.logo {
+    width: 150rpx;
+    height: 150rpx;
+    margin-top: 50rpx;
+}
+
+.starttexttitle {
+    font-size: 50rpx;
+    color: #009CE2;
+    text-shadow: 2px 2px 5px #B8D2FF;
+}
+
+.starttext {
+    font-size: 30rpx;
+    color: #65727f;
+    margin-top: 20rpx;
+    margin-bottom: 20rpx;
+}
+
+.recommend {
+    width: 486rpx;
+    height: 416rpx;
+}
+
+.questionimg {
+    width: 250rpx;
+    height: 250rpx;
+}
+
+.questiontitle {
+    font-size: 35rpx;
+}
+
+.choices {
+    width: 100%;
+    height: 580rpx;
+    margin-top: 10rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bottom_button {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20rpx;
+}
+
+.choice{
+    background-color: #f2f2f2;
+    width: 580rpx;
+    height: 100rpx;
+    margin-top: 10rpx;
+    display: flex;
+    align-items: center;
+    padding-left: 20rpx;
+    border-radius: 20rpx;
+    transition: all .5s;
+    animation: animation6 1500ms linear both;
+}
+
+.choice_selected{
+    background-color: #edf3fc;
+    width: 580rpx;
+    height: 100rpx;
+    margin-top: 10rpx;
+    display: flex;
+    align-items: center;
+    padding-left: 20rpx;
+    border-radius: 20rpx;
+    transition: all .5s;
+    animation: animation5 1500ms linear both;
+}
+
+.resulttitle{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10rpx;
+}
+
+.resulttitle text{
+    font-size: 40rpx;
+    color: #009CE2;
+    text-shadow: 2px 2px 5px #B8D2FF;
+}
+
+.resultimg{
+    width: 200rpx;
+    height: 125.5rpx;
+}
+
+.search_view {
+    height: 700rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.phoneitem{
+    margin-top: 20rpx;
+    margin-bottom: 10rpx;
+    background-color: white;
+    display: flex;
+    width: 600rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 15px;
+    border:2px solid #3863BC;
+}
+
+.phoneitem image{
+    margin: 10px;
+    width: 120rpx;
+    height: 159rpx;
+}
+
+.details{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.details_name{
+    margin-right: 10px;
+    font-size: 40rpx;
+}
+
+.details_content{
+    margin-right: 10px;
+    font-size: 25rpx;
+}
+
+.loading{
+    position: relative;
+    top: 400rpx;
+}
+
+.empty {
+    width: 500rpx;
+    height: 888rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.empty image {
+    width: 300rpx;
+    height: 300rpx;
+}

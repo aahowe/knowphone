@@ -1,0 +1,35 @@
+<!-- 标题 -->
+<view class="title">
+    <text class="title-text">{{title}}</text>
+    <view class="title-tag"><text class="title-tagtext">{{num}}</text></view>
+</view>
+<!-- 列表 -->
+<view class="listitem">
+    <view class="kitem" bindtap="itemClick" wx:for="{{dataList}}" wx:key="_id" data-item="{{item}}">
+        <text>{{item.title}}</text>
+        <text>{{mapgroup.map(item.group)}}</text>
+        <!-- group参数映射到中文 -->
+        <wxs module="mapgroup">
+            var type = {
+                'camera': '相机',
+                'soc': 'SOC',
+                'screen': '屏幕',
+                'battery': '电池',
+                'ram': '内存',
+                'rom': '存储',
+                'brand': '品牌',
+                'look': '外观',
+                'communication': '通信',
+                'system': '系统'
+            }
+            function map(group) {
+                return type[group]
+            }
+            module.exports = {
+                map: map
+            }
+        </wxs>
+    </view>
+</view>
+<!-- 加载动画 -->
+<l-loading class="loading" show="{{loading}}" type="change"></l-loading>

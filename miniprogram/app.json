@@ -1,0 +1,61 @@
+{
+    "pages": [
+        "pages/home/home",
+        "pages/phones/phones",
+        "pages/knowledge/knowledge",
+        "pages/brands/brands",
+        "pages/me/me",
+        "pages/socrank/socrank",
+        "pages/soc/soc",
+        "pages/myStar/myStar",
+        "pages/phone/phone",
+        "pages/knowledge_searchitem/knowledge_searchitem",
+        "pages/knowledge_item/knowledge_item",
+        "pages/phonecompare/phonecompare",
+        "pages/comparelist/comparelist",
+        "pages/search/search",
+        "pages/recommend/recommend",
+        "pages/about/about"
+    ],
+    "window": {
+        "backgroundColor": "#F6F6F6",
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#3863BC",
+        "navigationBarTitleText": "懂机",
+        "navigationBarTextStyle": "white"
+    },
+    "tabBar": {
+        "custom": true,
+        "list": [
+            {
+                "pagePath": "pages/home/home",
+                "text": "主页"
+            },
+            {
+                "pagePath": "pages/phones/phones",
+                "text": "手机"
+            },
+            {
+                "pagePath": "pages/knowledge/knowledge",
+                "text": "科普"
+            },
+            {
+                "pagePath": "pages/me/me",
+                "text": "我的"
+            }
+        ]
+    },
+    "usingComponents": {
+        "l-button": "/miniprogram_npm/lin-ui/button/index",
+        "l-icon": "/miniprogram_npm/lin-ui/icon/index"
+    },
+    "sitemapLocation": "sitemap.json",
+    "style": "v2",
+    "lazyCodeLoading": "requiredComponents",
+    "plugins": {
+        "WechatSI": {
+            "version": "0.3.5",
+            "provider": "wx069ba97219f66d99"
+        }
+    }
+}

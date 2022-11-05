@@ -1,0 +1,7 @@
+{
+    "backgroundColor": "#f2f2f2",
+    "usingComponents": {
+        "l-loading": "/miniprogram_npm/lin-ui/loading/index",
+        "qiun-wx-ucharts": "/components/qiun-wx-ucharts/src/index"
+    }
+}

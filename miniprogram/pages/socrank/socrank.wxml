@@ -1,0 +1,27 @@
+<!-- tab栏 -->
+<view class="top-wrap">
+    <tab id="category" tab-data="{{categoryMenu}}" tab-cur="{{categoryCur}}" size="{{80}}" bindchange="toggleCategory">
+    </tab>
+</view>
+<!-- soc列表 -->
+<swiper current="{{categoryCur}}" duration="{{duration}}" bindanimationfinish="animationFinish">
+    <swiper-item wx:for="{{categoryData}}" wx:for-index="idx" wx:key="index">
+        <scroll top-size="{{80}}" bind:refresh="refresh" bind:more="more" requesting="{{item.requesting}}" end="{{item.end}}" enableBackToTop="{{true}}" listCount="{{item.data.length}}">
+            <view class="cells">
+                <!-- 一行数据 -->
+                <view class="cell" bindtap="gotosoc" wx:for="{{item.data}}" wx:key="_id" data-item="{{item}}">
+                    <image class="socicon" src="{{item.icon}}" />
+                    <view class="soc_name">
+                        <text style="font-size: 35rpx;">{{item.zh_name}}</text>
+                    </view>
+                    <view class="soc_score">
+                        <text style="font-size: 35rpx;">{{(idx==0)?item.score:(idx==1?item.cpu_score:item.gpu_score)}}</text>
+                    </view>
+                    <view class="soc_rank">
+                        <text style="font-size: 50rpx;color: white;">{{index+1}}</text>
+                    </view>
+                </view>
+            </view>
+        </scroll>
+    </swiper-item>
+</swiper>

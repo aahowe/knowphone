@@ -1,0 +1,80 @@
+<!-- 加载动画 -->
+<l-loadmore show="{{loading}}" type="{{loadtype}}" line="{{true}}">
+    <view slot="content">
+        <!-- 切换栏 -->
+        <view class="case-display">
+            <block wx:for="{{scrollViewTitle}}">
+                <view class="{{currentIndex==index?'selected':'normal'}}" id="{{index}}" bindtap="changeCurrentIndex">{{item}}
+                </view>
+            </block>
+        </view>
+        <!-- phone列表 -->
+        <view class="phones" hidden="{{currentIndex!='0'}}">
+            <side-slip wx:for="{{ListPhone}}" wx:key="id" bind:delete="delete" data-index="{{index}}">
+                <view class="phone" bindtap="cellClick" data-index="{{index}}">
+                    <view class="phone_hd">
+                        <image mode="aspectFill" src="{{item.img}}" alt="" />
+                    </view>
+                    <view class="phone_bd">
+                        <view class="name">{{item.name}}</view>
+                        <text class="details_content">{{"处理器："+item.soc}}</text>
+                        <text class="details_content">{{"价格："+item.low+" "}}{{item.price+"¥"}}</text>
+                        <text class="details_content">{{"发售日期："+item.date}}</text>
+                    </view>
+                </view>
+            </side-slip>
+        </view>
+        <!-- soc列表 -->
+        <view class="socs" hidden="{{currentIndex!='1'}}">
+            <side-slip wx:for="{{ListSoc}}" wx:key="id" bind:delete="delete" data-index="{{index}}">
+                <view class="soc" bindtap="cellClick" data-index="{{index}}">
+                    <view class="soc_hd">
+                        <image mode="aspectFill" src="{{item.icon}}" alt="" />
+                    </view>
+                    <view class="soc_bd">
+                        <view class="name">{{item.zh_name}}</view>
+                    </view>
+                </view>
+            </side-slip>
+        </view>
+        <!-- knowledge列表 -->
+        <view class="cells" hidden="{{currentIndex!='2'}}">
+            <side-slip wx:for="{{listData}}" wx:key="id" bind:delete="delete" data-index="{{index}}">
+                <view class="cell" bindtap="cellClick" data-index="{{index}}">
+                    <view class="cell_bd">
+                        <text>{{item.title}}</text>
+                        <text>{{mapgroup.map(item.group)}}</text>
+                        <!-- group参数映射到中文 -->
+                        <wxs module="mapgroup">
+                            var type = {
+                                'camera': '相机',
+                                'soc': 'SOC',
+                                'screen': '屏幕',
+                                'battery': '电池',
+                                'ram': '内存',
+                                'rom': '存储',
+                                'brand': '品牌',
+                                'look': '外观',
+                                'communication': '通信',
+                                'system': '系统'
+                            }
+                            function map(group) {
+                                return type[group]
+                            }
+                            module.exports = {
+                                map: map
+                            }
+                        </wxs>
+                    </view>
+                </view>
+            </side-slip>
+        </view>
+        <!-- 暂无内容 -->
+        <view class="nocontent" hidden="{{flag==-1}}">
+            <image src="../../images/nocontent.png" bindtap="onPullDownRefresh"></image>
+            <text style="font-size: small;color:#65727f;">这里暂无内容</text>
+        </view>
+        <!-- 删除提示 -->
+        <l-message show="{{showmessage}}" content="删除成功" type="success" />
+    </view>
+</l-loadmore>

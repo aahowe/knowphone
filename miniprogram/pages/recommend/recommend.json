@@ -1,0 +1,13 @@
+{
+    "usingComponents": {
+        "van-transition": "/components/vant-weapp/transition/index",
+        "l-steps": "/miniprogram_npm/lin-ui/steps/index",
+        "l-step": "/miniprogram_npm/lin-ui/step/index",
+        "van-radio": "/components/vant-weapp/radio/index",
+        "van-radio-group": "/components/vant-weapp/radio-group/index",
+        "van-cell": "/components/vant-weapp/cell/index",
+        "van-cell-group": "/components/vant-weapp/cell-group/index",
+        "l-message": "/miniprogram_npm/lin-ui/message/index",
+        "van-loading": "/components/vant-weapp/loading/index"
+    }
+}

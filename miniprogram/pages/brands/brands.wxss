@@ -1,0 +1,58 @@
+.list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.phoneitem{
+    margin-top: 30rpx;
+    background-color: white;
+    display: flex;
+    width: 650rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 15px;
+    border:2px solid #3863BC;
+    box-shadow: 0px 0px 20px -10px #888;
+}
+
+.phoneitem image{
+    margin: 10px;
+    width: 120rpx;
+    height: 159rpx;
+}
+
+.details{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.details_name{
+    margin-right: 10px;
+    font-size: 40rpx;
+}
+
+.details_content{
+    margin-right: 10px;
+    font-size: 25rpx;
+}
+
+.empty {
+    width: 500rpx;
+    margin: auto;
+    margin-bottom: 50rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 50rpx;
+}
+
+.empty image {
+    width: 300rpx;
+    height: 300rpx;
+}

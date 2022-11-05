@@ -1,0 +1,30 @@
+<!-- 列表容器 -->
+<scroll emptyUrl="/images/nocontent.png" bind:refresh="refresh" bind:more="more" requesting="{{requesting}}" end="{{end}}" enableBackToTop="{{true}}" listCount="{{list.length}}" emptyShow="{{empty}}">
+    <!-- 多选group -->
+    <van-checkbox-group value="{{ result }}" bind:change="onChange">
+        <view class="cells">
+            <!-- 选项 -->
+            <view class="example_phones" wx:for="{{list}}" wx:key="id" data-id="{{item.id}}">
+                <image src="{{item.img}}" class="phone_img" bindtap="check" data-id="{{item.id}}" />
+                <view class="details" bindtap="check" data-id="{{item.id}}">
+                    <text class="phone_name">{{item.name}}</text>
+                    <text class="details_content">{{"处理器："+item.soc}}</text>
+                    <text class="details_content">{{item.low+" "}}{{item.price+"¥"}}</text>
+                    <text class="details_content">{{"发售日期："+item.date}}</text>
+                </view>
+                <van-checkbox checked-color="#3863BC" name="{{item.id}}"></van-checkbox>
+            </view>
+        </view>
+    </van-checkbox-group>
+</scroll>
+<!-- 按钮区域 -->
+<view class="button">
+    <view class="{{touchedvs?'bottom_button_t':'bottom_button'}}" catchtouchstart="touchvs" catchtouchend="release">
+        <icon class="iconfont icon-VSduibi"></icon>
+    </view>
+    <view class="{{touchedd?'bottom_button_t':'bottom_button'}}" catchtouchstart="touchd" catchtouchend="delete">
+        <l-icon name="delete"></l-icon>
+    </view>
+</view>
+<!-- 提示 -->
+<l-message show="{{showmessage}}" content="{{message}}" type="{{messagetype}}" />

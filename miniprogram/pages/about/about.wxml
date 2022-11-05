@@ -1,0 +1,6 @@
+<view class="card">
+    <image class="logoimg" src="/images/logo.jpg"></image>
+    <text class="title">懂机KnowPhone</text>
+    <text class="description">让你对手机的认识更加全面</text>
+    <text class="version">v1.0.2 ©Super Fungus</text>
+</view>

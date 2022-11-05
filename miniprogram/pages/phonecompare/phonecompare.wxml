@@ -1,0 +1,323 @@
+<view class="comparepage">
+    <!-- 标题区域 -->
+    <view class="title">
+        <view class="title_content">
+            <text>{{phonedata[0].name}}</text>
+            <image class="phone_img" src="{{phonedata[0].img}}"></image>
+        </view>
+        <view class="title_content">
+            <text>{{phonedata[1].name}}</text>
+            <image class="phone_img" src="{{phonedata[1].img}}"></image>
+        </view>
+    </view>
+    <!-- 雷达图 -->
+    <view class="details">
+        <view class="head_text">
+            <text>综合对比</text>
+        </view>
+        <view class="charts-box">
+            <qiun-wx-ucharts type="radar" loadingType="4" chartData="{{radarData}}" canvas2d="{{true}}" canvasId="zpTIaLIFVTwTssNjAQmbZDjDMmjavxhR" />
+        </view>
+    </view>
+    <!-- 柱状图 -->
+    <view class="details">
+        <view class="head_text">
+            <text>性能对比</text>
+        </view>
+        <view class="charts-box">
+            <qiun-wx-ucharts type="column" loadingType="4" chartData="{{columnData}}" canvas2d="{{true}}" canvasId="WokoWCbAKEDWIcljMyTbzkHSyKdhLwFo" />
+        </view>
+    </view>
+    <!-- 外观 -->
+    <view class="details">
+        <view class="head_text">
+            <text>外观</text>
+        </view>
+        <view class="details_title">
+            <text>屏幕尺寸</text>
+        </view>
+        <view class="item">
+            <view class="item_child">
+                <text>{{phonedata[0].size}}英寸</text>
+            </view>
+            <view class="item_child">
+                <text>{{phonedata[1].size}}英寸</text>
+            </view>
+        </view>
+        <view class="details_title">
+            <text>分辨率</text>
+        </view>
+        <view class="item">
+            <view class="item_child">
+                <text>{{phonedata[0].resolution}}</text>
+            </view>
+            <view class="item_child">
+                <text>{{phonedata[1].resolution}}</text>
+            </view>
+        </view>
+        <view class="details_title">
+            <text>刷新率</text>
+        </view>
+        <view class="item">
+            <view class="item_child">
+                <text>{{phonedata[0].refresh}}</text>
+            </view>
+            <view class="item_child">
+                <text>{{phonedata[1].refresh}}</text>
+            </view>
+        </view>
+        <view class="details_title">
+            <text>屏幕特性</text>
+        </view>
+        <view class="item">
+            <view class="item_child">
+                <text>{{phonedata[0].screen}}</text>
+            </view>
+            <view class="item_child">
+                <text>{{phonedata[1].screen}}</text>
+            </view>
+        </view>
+        <view class="details_title">
+            <text>外壳材质</text>
+        </view>
+        <view class="item">
+            <view class="item_child">
+                <text>{{phonedata[0].material}}</text>
+            </view>
+            <view class="item_child">
+                <text>{{phonedata[1].material}}</text>
+            </view>
+        </view>
+        <view class="details_title">
+            <text>尺寸和重量</text>
+        </view>
+        <view class="item">
+            <view class="item_child">
+                <text>{{phonedata[0].size_weigth}}</text>
+            </view>
+            <view class="item_child">
+                <text>{{phonedata[1].size_weigth}}</text>
+            </view>
+        </view>
+    </view>
+    <!-- 电池 -->
+    <view class="details">
+        <view class="head_text">
+            <text>电池</text>
+        </view>
+        <view class="details_title">
+            <text>电池容量</text>
+        </view>
+        <view class="item">
+            <view class="item_child">
+                <text>{{phonedata[0].battery}}mAh</text>
+            </view>
+            <view class="item_child">
+                <text>{{phonedata[1].battery}}mAh</text>
+            </view>
+        </view>
+        <view class="details_title">
+            <text>充电速度</text>
+        </view>
+        <view class="item">
+            <view class="item_child">
+                <text>{{phonedata[0].charge}}</text>
+            </view>
+            <view class="item_child">
+                <text>{{phonedata[1].charge}}</text>
+            </view>
+        </view>
+    </view>
+    <!-- 摄影 -->
+    <view class="details">
+        <view class="head_text">
+            <text>摄影</text>
+        </view>
+        <view class="details_title">
+            <text>前摄</text>
+        </view>
+        <view class="item">
+            <view class="item_child">
+                <text>{{phonedata[0].fontc}}</text>
+            </view>
+            <view class="item_child">
+                <text>{{phonedata[1].fontc}}</text>
+            </view>
+        </view>
+        <view class="details_title">
+            <text>后置摄像头</text>
+        </view>
+        <view class="item">
+            <view class="item_child">
+                <text>{{phonedata[0].backc}}</text>
+            </view>
+            <view class="item_child">
+                <text>{{phonedata[1].backc}}</text>
+            </view>
+        </view>
+        <view class="details_title">
+            <text>闪光灯</text>
+        </view>
+        <view class="item">
+            <view class="item_child">
+                <text>{{phonedata[0].flash}}</text>
+            </view>
+            <view class="item_child">
+                <text>{{phonedata[1].flash}}</text>
+            </view>
+        </view>
+        <view class="details_title">
+            <text>影像特色</text>
+        </view>
+        <view class="item">
+            <view class="item_child">
+                <text>{{phonedata[0].camera}}</text>
+            </view>
+            <view class="item_child">
+                <text>{{phonedata[1].camera}}</text>
+            </view>
+        </view>
+    </view>
+    <!-- 内存和闪存 -->
+    <view class="details">
+        <view class="head_text">
+            <text>内存和闪存</text>
+        </view>
+        <view class="details_title">
+            <text>闪存RAM</text>
+        </view>
+        <view class="item">
+            <view class="item_child">
+                <text>{{phonedata[0].ram}}</text>
+            </view>
+            <view class="item_child">
+                <text>{{phonedata[1].ram}}</text>
+            </view>
+        </view>
+        <view class="details_title">
+            <text>内存ROM</text>
+        </view>
+        <view class="item">
+            <view class="item_child">
+                <text>{{phonedata[0].rom}}</text>
+            </view>
+            <view class="item_child">
+                <text>{{phonedata[1].rom}}</text>
+            </view>
+        </view>
+    </view>
+    <!-- 网络和传输 -->
+    <view class="details">
+        <view class="head_text">
+            <text>网络和传输</text>
+        </view>
+        <view class="details_title">
+            <text>数据接口</text>
+        </view>
+        <view class="item">
+            <view class="item_child">
+                <text>{{phonedata[0].port}}</text>
+            </view>
+            <view class="item_child">
+                <text>{{phonedata[1].port}}</text>
+            </view>
+        </view>
+        <view class="details_title">
+            <text>定位系统</text>
+        </view>
+        <view class="item">
+            <view class="item_child">
+                <text>{{phonedata[0].position}}</text>
+            </view>
+            <view class="item_child">
+                <text>{{phonedata[1].position}}</text>
+            </view>
+        </view>
+        <view class="details_title">
+            <text>WLAN规格</text>
+        </view>
+        <view class="item">
+            <view class="item_child">
+                <text>{{phonedata[0].wlan}}</text>
+            </view>
+            <view class="item_child">
+                <text>{{phonedata[1].wlan}}</text>
+            </view>
+        </view>
+        <view class="details_title">
+            <text>蓝牙</text>
+        </view>
+        <view class="item">
+            <view class="item_child">
+                <text>{{phonedata[0].bluetooth}}</text>
+            </view>
+            <view class="item_child">
+                <text>{{phonedata[1].bluetooth}}</text>
+            </view>
+        </view>
+        <view class="details_title">
+            <text>网络支持</text>
+        </view>
+        <view class="item">
+            <view class="item_child">
+                <text>{{phonedata[0].network}}</text>
+            </view>
+            <view class="item_child">
+                <text>{{phonedata[1].network}}</text>
+            </view>
+        </view>
+        <view class="details_title">
+            <text>电话卡槽</text>
+        </view>
+        <view class="item">
+            <view class="item_child">
+                <text>{{phonedata[0].sim}}</text>
+            </view>
+            <view class="item_child">
+                <text>{{phonedata[1].sim}}</text>
+            </view>
+        </view>
+    </view>
+    <!-- 其他 -->
+    <view class="details">
+        <view class="head_text">
+            <text>其他</text>
+        </view>
+        <view class="details_title">
+            <text>初始系统</text>
+        </view>
+        <view class="item">
+            <view class="item_child">
+                <text>{{phonedata[0].os}}</text>
+            </view>
+            <view class="item_child">
+                <text>{{phonedata[1].os}}</text>
+            </view>
+        </view>
+        <view class="details_title">
+            <text>震动马达</text>
+        </view>
+        <view class="item">
+            <view class="item_child">
+                <text>{{phonedata[0].vib}}</text>
+            </view>
+            <view class="item_child">
+                <text>{{phonedata[1].vib}}</text>
+            </view>
+        </view>
+        <view class="details_title">
+            <text>防水性</text>
+        </view>
+        <view class="item">
+            <view class="item_child">
+                <text>{{phonedata[0].water}}</text>
+            </view>
+            <view class="item_child">
+                <text>{{phonedata[1].water}}</text>
+            </view>
+        </view>
+    </view>
+</view>
+<!-- 加载动画 -->
+<l-loading type="flash" show="{{loading}}" full-screen="{{true}}" size="large">
+</l-loading>

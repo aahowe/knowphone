@@ -1,0 +1,27 @@
+<!-- 加载动画 -->
+<l-loadmore show="{{loading}}" type="{{loadtype}}" line="{{true}}">
+    <view slot="content">
+        <!-- 下拉菜单 -->
+        <van-dropdown-menu active-color="#3863BC">
+            <van-dropdown-item title="发布时间" value="{{date}}" options="{{datelist}}" bind:change="changedate" />
+            <van-dropdown-item title="价格" value="{{priceorder}}" options="{{pricelist}}" bind:change="changeorder" />
+        </van-dropdown-menu>
+        <!-- 手机列表 -->
+        <view class="list">
+            <view class="phoneitem" bindtap="gotophone" wx:for="{{result}}" wx:key="_id" data-item="{{item}}">
+                <image src="{{item.img}}" />
+                <view class="details">
+                    <text class="details_name">{{item.name}}</text>
+                    <text class="details_content">{{"处理器："+item.soc}}</text>
+                    <text class="details_content">{{item.low+" "}}{{item.price+"¥"}}</text>
+                    <text class="details_content">{{"发售日期："+item.date}}</text>
+                </view>
+            </view>
+        </view>
+        <!-- 列表为空 -->
+        <view class="empty" wx:if="{{empty}}">
+            <image src="/images/nocontent.png"></image>
+            <text>未找到内容</text>
+        </view>
+    </view>
+</l-loadmore>

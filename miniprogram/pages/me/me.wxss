@@ -1,0 +1,67 @@
+Page {
+    background-color: #F2F2F2;
+}
+
+.head {
+    height: 230rpx;
+    width: 700rpx;
+    margin: auto;
+    background-color: white;
+    border-radius: 20px;
+    position: relative;
+    top: 15px;
+    box-shadow: 0px 0px 20px -10px #888;
+}
+
+.avatar{
+    position: relative;
+    top: 55rpx;
+    left: 80rpx;
+}
+
+.avatar-l-class{
+    box-shadow: 0px 0px 20px -10px #888;
+}
+
+.name{
+    width: 400rpx;
+    height: 150rpx;
+    position: relative;
+    left: 250rpx;
+    bottom: 90rpx;
+    display: flex;
+    align-items: center;
+}
+
+.function {
+    background-color: white;
+    position: relative;
+    top: 60rpx;
+    width: 680rpx;
+    margin: auto;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px -10px #888;
+}
+
+.title{
+    width: 100%;
+    height: 60rpx;
+    background-color: #4262b6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    
+}
+
+.list_text{
+    font-size: 30rpx;
+}
+
+.l-button{
+    position: relative;
+    left: 240rpx;
+    margin-top: 10rpx;
+    margin-bottom: 10rpx;
+}

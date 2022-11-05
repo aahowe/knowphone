@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "side-slip":"/components/side-slip/index",
+    "van-swipe-cell": "/components/vant-weapp/swipe-cell/index",
+    "l-loadmore":"/miniprogram_npm/lin-ui/loadmore/index",
+    "l-message": "/miniprogram_npm/lin-ui/message/index"
+  },
+    "onReachBottomDistance": 50,
+    "backgroundColor": "#f2f2f2",
+    "backgroundTextStyle": "dark"
+}

@@ -1,0 +1,96 @@
+<!-- 搜索框 -->
+<van-search value="{{inputValue}}" placeholder="请输入搜索关键词" show-action bind:search="onSearch" bind:cancel="onCancel" shape="round" bind:focus="showsearchview" use-action-slot>
+    <!-- 下拉选项 -->
+    <van-dropdown-menu slot="action" active-color="#3863BC" custom-class="selector">
+        <van-dropdown-item value="{{type}}" options="{{option}}" bind:change="changetype" />
+    </van-dropdown-menu>
+</van-search>
+<!-- 历史记录 -->
+<van-transition show="{{showhistory}}" name="fade-up">
+    <view class="nearly-search">
+        <view class="title-nearlySearch">
+            <text>历史搜索</text>
+            <image class=" title-clear-nearlySearch" src="/images/ic-clear.png" bindtap="historyDelAll"> </image>
+        </view>
+        <view class="list-nearlySearch">
+            <text class="test-child" wx:for="{{historyResult}}" wx:key='index' bindtap="setInputValue" data-item="{{item}}">{{item}}</text>
+            <view wx:if="{{hasMoreBtn}}" bindtap="toggleShowMore">
+                <image style="width:24rpx;height:24rpx" src="/images/ic-arrowdown.svg"></image>
+            </view>
+        </view>
+    </view>
+</van-transition>
+<!-- 删除搜索历史提示弹窗 -->
+<l-dialog show="{{deletedialog}}" type="confirm" title="提醒" content="确定要删除历史记录吗" bind:linconfirm="delete" />
+<!-- 提示弹窗 -->
+<l-dialog show="{{dialog}}" type="alert" title="提醒" content="{{dialogcontent}}" />
+<!-- 知识词条检索列表 -->
+<van-transition show="{{showklist}}" name="fade-up" custom-class="itemlist">
+    <view class="list">
+        <view class="kitem" bindtap="gotoknowledge" wx:for="{{result}}" wx:key="_id" data-item="{{item}}">
+            <text>{{item.title}}</text>
+            <text>{{mapgroup.map(item.group)}}</text>
+            <!-- group参数映射到中文 -->
+            <wxs module="mapgroup">
+                var type = {
+                    'camera': '相机',
+                    'soc': 'SOC',
+                    'screen': '屏幕',
+                    'battery': '电池',
+                    'ram': '内存',
+                    'rom': '存储',
+                    'brand': '品牌',
+                    'look': '外观',
+                    'communication': '通信',
+                    'system': '系统'
+                }
+                function map(group) {
+                    return type[group]
+                }
+                module.exports = {
+                    map: map
+                }
+            </wxs>
+        </view>
+    </view>
+    <l-loading l-class="loading" type="flash" show="{{loading}}" size="large" />
+    <view class="empty" wx:if="{{empty}}">
+        <image src="/images/nocontent.png"></image>
+        <text>未找到内容</text>
+    </view>
+</van-transition>
+<!-- soc检索列表 -->
+<van-transition show="{{showslist}}" name="fade-up" custom-class="itemlist">
+    <view class="list">
+        <view class="cell" bindtap="gotosoc" wx:for="{{result}}" wx:key="_id" data-item="{{item}}">
+            <image class="socicon" src="{{item.icon}}" />
+            <view class="soc_name">
+                <text>{{item.zh_name}}</text>
+            </view>
+        </view>
+    </view>
+    <l-loading l-class="loading" type="flash" show="{{loading}}" size="large" />
+    <view class="empty" wx:if="{{empty}}">
+        <image src="/images/nocontent.png"></image>
+        <text>未找到内容</text>
+    </view>
+</van-transition>
+<!-- 手机检索列表 -->
+<van-transition show="{{showplist}}" name="fade-up" custom-class="itemlist">
+    <view class="list">
+        <view class="phoneitem" bindtap="gotophone" wx:for="{{result}}" wx:key="_id" data-item="{{item}}">
+            <image src="{{item.img}}" />
+            <view class="details">
+                <text class="details_name">{{item.name}}</text>
+                <text class="details_content">{{"处理器："+item.soc}}</text>
+                <text class="details_content">{{item.low+" "}}{{item.price+"¥"}}</text>
+                <text class="details_content">{{"发售日期："+item.date}}</text>
+            </view>
+        </view>
+    </view>
+    <l-loading l-class="loading" type="flash" show="{{loading}}" size="large" />
+    <view class="empty" wx:if="{{empty}}">
+        <image src="/images/nocontent.png"></image>
+        <text>未找到内容</text>
+    </view>
+</van-transition>

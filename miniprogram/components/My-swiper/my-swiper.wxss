@@ -1,0 +1,93 @@
+.my-swiper {
+    width: 670rpx;
+    height: 400rpx;
+    /* border: 1px solid red; */
+    position: relative;
+    z-index: 0;
+    margin:auto;
+    margin-top: 30rpx;
+}
+
+.child-base {
+    /* transition: all 0.5s; 用js异步设置了，因为同步设置初始化也有动画*/
+    border-radius: 8rpx;
+    position: absolute;
+    overflow: hidden;
+}
+
+.child-base image {
+    height: 100%;
+    width: 100%;
+}
+
+.after {
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    top: 0;
+    left: 25%;
+    margin-top: 2.5%;
+    z-index: 1;
+    /* background: grey; */
+}
+
+.left {
+    width: 50%;
+    height: 80%;
+    top: 0;
+    margin-top: 2.5%;
+    left: 0;
+    z-index: 2;
+    border-radius: 20px;
+    /* background: pink; */
+}
+
+.right {
+    width: 50%;
+    height: 80%;
+    left: 50%;
+    top: 0;
+    margin-top: 2.5%;
+    z-index: 2;
+    border-radius: 20px;
+    /* background: orange; */
+}
+
+.center {
+    width: 95%;
+    height: 95%;
+    top: 0;
+    left: 2.5%;
+    /* background: green; */
+    z-index: 3;
+    box-shadow: 0px 0px 20px -10px #888;
+    border-radius: 20px;
+}
+
+
+
+/* 焦点指示器 */
+.focus-box {
+    height: 6px;
+    /* width:100px;background: #fff; */
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    left: 270rpx;
+    bottom: 40rpx;
+    z-index: 4;
+}
+
+.focus-box .child {
+    height: 6px;
+    width: 6px;
+    border-radius: 6px;
+    margin-left: 6px;
+    background: #f2f2f2;
+    transition: all 0.5s;
+}
+
+.focus-box .active {
+    background: white;
+    width: 24px;
+}

@@ -1,0 +1,424 @@
+page {
+    background-color: #ffffff;
+}
+
+.page {
+    background-color: #f2f2f2;
+    box-sizing: border-box;
+    padding-bottom: 100px;
+    z-index: -1;
+    transition: all .8s;
+}
+
+.titleback {
+    height: 400rpx;
+    background-color: #3863bc;
+    background-image: linear-gradient(180deg, #3863bc 25%, #f2f2f2 100%);
+    z-index: 0;
+    width: 100%;
+    position: absolute;
+    top: 0;
+}
+
+.box {
+    display: flex;
+    padding: 20rpx 10rpx;
+}
+
+.boximg {
+    height: 300rpx;
+    width: 300rpx;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px -10px #888;
+}
+
+.soc_touch {
+    background-color: #ffffff;
+    width: 300rpx;
+    height: 300rpx;
+    margin: auto;
+    border-radius: 20px;
+    margin-top: 40rpx;
+    box-shadow: 0px 0px 20px -10px #888;
+    display: flex;
+    align-items: center;
+    vertical-align: center;
+    justify-content: center;
+    flex-direction: row;
+    animation: animation3 1500ms linear both;
+}
+
+.soc {
+    width: 300rpx;
+    height: 300rpx;
+    margin: auto;
+    border-radius: 20px;
+    margin-top: 40rpx;
+    box-shadow: 0px 0px 20px -10px #888;
+    display: flex;
+    align-items: center;
+    vertical-align: center;
+    justify-content: center;
+    flex-direction: row;
+    animation: animation4 1500ms linear both;
+}
+
+.rec_touch {
+    width: 300rpx;
+    height: 300rpx;
+    margin: auto;
+    border-radius: 20px;
+    margin-top: 40rpx;
+    box-shadow: 0px 0px 20px -10px #888;
+    display: flex;
+    align-items: center;
+    vertical-align: center;
+    justify-content: center;
+    flex-direction: row;
+    animation: animation3 1500ms linear both;
+}
+
+.rec {
+    width: 300rpx;
+    height: 300rpx;
+    margin: auto;
+    border-radius: 20px;
+    margin-top: 40rpx;
+    box-shadow: 0px 0px 20px -10px #888;
+    display: flex;
+    align-items: center;
+    vertical-align: center;
+    justify-content: center;
+    flex-direction: row;
+    animation: animation4 1500ms linear both;
+}
+
+.searchbar {
+    margin: auto;
+    position: relative;
+    top: 20rpx;
+    box-shadow: 0px 0px 20px -10px #888;
+}
+
+.voiceview {
+    width: 100%;
+    height: 75px;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    z-index: 200;
+}
+
+.voiceright {
+    width: 75px;
+    height: 75px;
+    position: fixed;
+    transform: translateX(375rpx);
+    transition: all .8s;
+    bottom: 100px;
+}
+
+.voicecenter {
+    width: 75px;
+    height: 75px;
+    position: fixed;
+    transition: all .8s;
+    bottom: 100px;
+}
+
+/* 按下的语音按钮 */
+.recording {
+    width: 75px;
+    height: 75px;
+    position: fixed;
+    transform: scale(1.4);
+    transition: all .8s;
+    bottom: 100px;
+}
+
+.tipsimg {
+    transform: scale(1, 1);
+    transform-origin: 300rpx bottom;
+    position: fixed;
+    right: 300rpx;
+    bottom: 180px;
+    width: 397.6rpx;
+    height: 184rpx;
+    z-index: 200;
+    transition: all .8s;
+}
+
+.tipsimgright {
+    transform: scale(0.9, 0.9);
+    transform-origin: 380rpx bottom;
+    position: fixed;
+    right: 10rpx;
+    bottom: 160px;
+    width: 397.6rpx;
+    height: 184rpx;
+    z-index: 200;
+    transition: all .8s;
+}
+
+.hidetipsimg {
+    transform: scale(0, 0);
+    transform-origin: 300rpx bottom;
+    position: fixed;
+    right: 300rpx;
+    bottom: 180px;
+    width: 397.6rpx;
+    height: 184rpx;
+    z-index: 200;
+    transition: all .8s;
+}
+
+.hidetipsimgright {
+    transform: scale(0, 0);
+    transform-origin: 380rpx bottom;
+    position: fixed;
+    right: 10rpx;
+    bottom: 160px;
+    width: 470rpx;
+    height: 213rpx;
+    z-index: 200;
+    transition: all .8s;
+}
+
+.search_view {
+    height: 500rpx;
+    margin-top: 50rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+.phoneitem {
+    margin-top: 20rpx;
+    margin-bottom: 10rpx;
+    background-color: white;
+    width: 650rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 15px;
+    border: 2px solid #3863BC;
+}
+
+.phoneimage {
+    margin: 10px;
+    width: 120rpx;
+    height: 159rpx;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-right: 20px;
+}
+
+.details_name {
+    font-size: 40rpx;
+}
+
+.details_content {
+    font-size: 25rpx;
+}
+
+.empty {
+    margin: auto;
+    margin-bottom: 20rpx;
+    width: 500rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.empty image {
+    width: 300rpx;
+    height: 300rpx;
+}
+
+.loadingview {
+    left: 0rpx;
+    top: 0rpx;
+    position: fixed;
+    z-index: 9999999;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    transition: all .8s;
+}
+
+.loadingviewfade {
+    left: 0rpx;
+    top: 0rpx;
+    position: fixed;
+    z-index: 9999999;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    opacity: 0;
+    transition: all .8s;
+}
+
+.hot {
+    background-color: white;
+    width: 670rpx;
+    margin: auto;
+    margin-top: 30rpx;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px -10px #888;
+}
+
+.hottitle {
+    padding-top: 20rpx;
+    padding-left: 20rpx;
+    margin-bottom: 10rpx;
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.hottitletext1 {
+    font-size: 40rpx;
+    font-weight: bold;
+    color: #cd9e6d;
+}
+
+.hottitletext2 {
+    width: 500rpx;
+    font-size: 40rpx;
+    font-weight: bold;
+    color: #cd9e6d;
+    position: absolute;
+    bottom: -0.4rem;
+    left: 3rem;
+    font-weight: 900;
+    opacity: 0.2;
+    z-index: 0;
+}
+
+.phonelist {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 650rpx;
+}
+
+.hotphone {
+    width: 650rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.enter {
+    z-index: 999999999;
+}
+
+/*加载动画*/
+.main {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.loader {
+    height: 25px;
+    width: 25px;
+    position: absolute;
+    top: 70%;
+    animation: rotate 4s infinite;
+}
+
+.ball {
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    box-shadow: 0 5px 10px rgba(255, 255, 255, 0.198);
+}
+
+.upper {
+    left: 0;
+    top: -22px;
+    background: #00ddf9;
+    animation: upper 1s linear infinite;
+}
+
+@keyframes upper {
+    50% {
+        top: 22px;
+    }
+
+    100% {
+        top: 22px;
+    }
+}
+
+.right {
+    right: -22px;
+    top: 0;
+    background: #3863bc;
+    animation: right 1s linear infinite;
+}
+
+@keyframes right {
+    50% {
+        right: 22px;
+    }
+
+    100% {
+        right: 22px;
+    }
+}
+
+.lower {
+    bottom: -22px;
+    left: 0;
+    background: #00ddf9;
+    animation: lower 1s linear infinite;
+}
+
+@keyframes lower {
+    50% {
+        bottom: 22px;
+    }
+
+    100% {
+        bottom: 22px;
+    }
+}
+
+.left {
+    left: -22px;
+    top: 0;
+    background: #3863bc;
+    animation: left 1s linear infinite;
+}
+
+@keyframes left {
+    50% {
+        left: 22px;
+    }
+
+    100% {
+        left: 22px;
+    }
+}
+
+.bg_img {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+}

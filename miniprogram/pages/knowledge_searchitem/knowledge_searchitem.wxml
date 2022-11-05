@@ -1,0 +1,41 @@
+<!-- 标题 -->
+<view class="title">
+    <text class="title-text">{{dataList.title}}</text>
+</view>
+<!-- 内容 -->
+<view class="container">
+    <view class="mainbody" wx:for="{{dataList.content}}">
+        <text user-select="{{true}}" class="mainbody-text">{{item.text}}</text>
+        <swiper indicator-dots="true" class="swiper_container" autoplay="{{true}}">
+            <swiper-item class="swiper_container_item" wx:for="{{item.img}}" wx:for-item="imgs">
+                <image class="swiper_container_image" src="{{imgs}}" bindtap="gotobig" data-item="{{item}}" data-info="{{index}}" mode="aspectFit">
+                </image>
+            </swiper-item>
+        </swiper>
+        <text class="swiper_container_text">点击查看大图</text>
+    </view>
+</view>
+<!-- 页底链接 -->
+<view class="details">
+    <image class="details-image" src="/images/link.png"></image>
+    <text class="details-text" user-select="{{true}}">{{dataList.link}}
+    </text>
+</view>
+<!-- 底部按钮 -->
+<view class="bottom">
+    <l-button special="{{true}}" open-type="share">
+        <view class="bottom_button">
+            <l-icon name="share" />
+        </view>
+    </l-button>
+    <l-button special="{{true}}" bind:lintap="star" disabled="{{disabledstar}}">
+        <view class="bottom_button">
+            <icon class="iconfont {{star?'icon-shoucang':'icon-31shoucang'}} {{starcolor}}"></icon>
+        </view>
+    </l-button>
+</view>
+<!-- 加载动画 -->
+<l-loading type="flash" show="{{loading}}" full-screen="{{true}}" size="large">
+</l-loading>
+<!-- 提示登录弹窗 -->
+<l-dialog show="{{logindg}}" type="alert" title="提醒" content="若需使用该功能请先登录" />

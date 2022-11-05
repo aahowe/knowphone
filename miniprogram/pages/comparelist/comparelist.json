@@ -1,0 +1,8 @@
+{
+    "usingComponents": {
+        "scroll":"/components/scroll/index",
+        "van-checkbox":"/components/vant-weapp/checkbox/index",
+        "van-checkbox-group":"/components/vant-weapp/checkbox-group/index",
+        "l-message": "/miniprogram_npm/lin-ui/message/index"
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "usingComponents": {
+        "van-search": "/components/vant-weapp/search/index",
+        "l-dialog": "/miniprogram_npm/lin-ui/dialog/index",
+        "van-transition": "/components/vant-weapp/transition/index",
+        "van-dropdown-menu": "/components/vant-weapp/dropdown-menu/index",
+        "van-dropdown-item": "/components/vant-weapp/dropdown-item/index",
+        "l-loading": "/miniprogram_npm/lin-ui/loading/index"
+    }
+}

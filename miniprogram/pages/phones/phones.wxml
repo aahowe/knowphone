@@ -1,0 +1,21 @@
+<!-- 标题 -->
+<view class="toptitle">
+    <image src="/images/brand/phones.png" />
+    <text class='titletext'>手机数据库</text>
+    <view></view>
+    <text class="childtitletext">万千机型数据</text>
+</view>
+<!-- 搜索图标 -->
+<view class="search" bindtap="gotosearch">
+    <image src="/images/search.png" />
+    <text>点击这里搜索所有手机</text>
+</view>
+<!-- 列表 -->
+<view class="grid-list">
+    <view class="grid-item" bindtap="click" wx:for="{{gridList}}" wx:key="id" style="background-color: {{item.color}};" data-item="{{item}}">
+        <image src="{{item.icon}}"/>
+        <text> {{item.brand}}</text>
+    </view>
+</view>
+<!-- 底部占位 -->
+<view class="bottom"></view>

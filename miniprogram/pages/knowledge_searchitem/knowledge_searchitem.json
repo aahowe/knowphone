@@ -1,0 +1,9 @@
+{
+    "backgroundColor": "#f2f2f2",
+    "usingComponents": {
+        "l-card": "/miniprogram_npm/lin-ui/card/index",
+        "l-icon": "/miniprogram_npm/lin-ui/icon/index",
+        "l-loading": "/miniprogram_npm/lin-ui/loading/index",
+        "l-dialog": "/miniprogram_npm/lin-ui/dialog/index"
+    }
+}

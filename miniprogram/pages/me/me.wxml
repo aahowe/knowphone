@@ -1,0 +1,19 @@
+<!-- 头像昵称卡片 -->
+<view class="head">
+    <l-avatar class="avatar" src="{{avatarurl}}" shape="circle" size="120" l-text-class="avatartext" l-class="avatar-l-class" bind:lintap="getprofile" />
+    <view class="name">
+        <text style="font-size: 30rpx;">{{name}}</text>
+    </view>
+</view>
+<!-- 功能卡片 -->
+<view class="function">
+    <view class="title">
+        <text style="font-size: 35rpx;color: white;">懂机KnowPhone</text>
+    </view>
+    <view class="list">
+        <l-list l-content-class="list_text" gap="20" icon-size="40" icon="favor" title="我的收藏" bind:lintap="gofavor" />
+        <l-list l-content-class="list_text" gap="20" icon-size="40" icon="order" title="我的对比" bind:lintap="gocompare" />
+        <l-list l-content-class="list_text" gap="20" icon-size="40" icon="warning" title="关于" url="/pages/about/about" />
+    </view>
+    <l-button l-class="l-button" icon="customer-service" plain="{{true}}" open-type="contact" shape="semicircle">联系我们</l-button>
+</view>

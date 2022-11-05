@@ -1,0 +1,37 @@
+.card{
+    box-shadow: 0px 0px 20px -10px #888;
+    margin: auto;
+    margin-top: 30rpx;
+    background-color: white;
+    border-radius: 20px;
+    width: 700rpx;
+    height: 1000rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logoimg{
+    margin-top: 100rpx;
+    width: 300rpx;
+    height: 300rpx;
+}
+
+.title{
+    font-size: 50rpx;
+    color: #009CE2;
+    text-shadow: 2px 2px 5px #B8D2FF;
+    font-weight: 500;
+}
+
+.description{
+    font-size: 35rpx;
+    color: #65727f;
+    margin-top: 30rpx;
+    margin-bottom: 20rpx;
+}
+
+.version{
+    margin-top: 300rpx;
+    font-weight: 400;
+}
